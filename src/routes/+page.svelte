@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+  import { SearchStore } from "$lib/stores";
+  $: search = $SearchStore;
+</script>
+
+<h1 class="h1">Welcome Victor</h1>
+{#if search !== null && search !== ""}
+  <p>Search: {search}</p>
+{:else}
+  <p>No searched param</p>
+{/if}

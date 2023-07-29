@@ -1,3 +1,0 @@
-<nav>
-  This nave
-</nav>

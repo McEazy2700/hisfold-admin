@@ -19,7 +19,8 @@ const config = {
   },
 
   plugins: [
-    ...require('@skeletonlabs/skeleton/tailwind/skeleton.cjs')()
+    require("@tailwindcss/forms"),
+    ...require("@skeletonlabs/skeleton/tailwind/skeleton.cjs")(),
   ],
 };
 

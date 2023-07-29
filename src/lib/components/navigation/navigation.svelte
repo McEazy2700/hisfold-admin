@@ -1,4 +1,4 @@
-<ul class="list-nav p-4">
+<ul class="list-nav">
   <li>
     <a href="/">Dashboard</a>
   </li>
