@@ -7,10 +7,10 @@
 	}
 </script>
 
-<AppBar shadow="shadow-lg">
+<AppBar slotLead="m-0" padding="p-1 lg:p-3" shadow="shadow-lg">
 	<svelte:fragment slot="lead">
 		<div class="flex items-center">
-			<button on:click={drawerOpen} class="w-12 lg:hidden btn btn-sm mr-4">
+			<button on:click={drawerOpen} class="w-12 lg:hidden btn btn-sm mr-0">
 				<iconify-icon class="text-3xl" icon="majesticons:menu" />
 			</button>
 		</div>
