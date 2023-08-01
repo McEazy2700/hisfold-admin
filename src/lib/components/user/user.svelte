@@ -3,7 +3,7 @@
 
 </script>
 
-<div class="lg:flex flex-row gap-2 items-center hidden">
-  <h4 class="text-xl font-medium">Ezekiel Victor</h4>
+<a href="/profile" class="lg:flex flex-row gap-2 items-center hidden">
+  <span class="text-xl font-medium">Ezekiel Victor</span>
   <Avatar rounded="rounded-full" width="w-10"/>
-</div>
+</a>

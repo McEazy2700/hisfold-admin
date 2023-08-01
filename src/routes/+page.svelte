@@ -9,3 +9,5 @@
 {:else}
   <p>No searched param</p>
 {/if}
+
+<div>Some new stuff</div>
