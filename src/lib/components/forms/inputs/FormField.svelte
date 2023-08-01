@@ -4,7 +4,7 @@
   export let placeholder: string | null = null;
 </script>
 
-<label class="label flex items-center w-full justify-between">
+<label class="label flex flex-col lg:flex-row gap-1 items-center w-full justify-between">
   <span class="flex-[0.3]">
     <slot name="label" />
   </span>
