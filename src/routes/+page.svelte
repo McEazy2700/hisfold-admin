@@ -1,13 +1,21 @@
 <script lang="ts">
-  import { SearchStore } from "$lib/stores";
-  $: search = $SearchStore;
+	import { ProfileImages } from '$lib/components';
+	import { ProfileStore } from '$lib/stores';
+	$: profile = $ProfileStore;
 </script>
 
-<h1 class="h1">Welcome Victor</h1>
-{#if search !== null && search !== ""}
-  <p>Search: {search}</p>
-{:else}
-  <p>No searched param</p>
-{/if}
-
-<div>Some new stuff</div>
+<div class="relative">
+	<ProfileImages
+		avatar={profile.logo}
+		avatarTitle={profile.name}
+    avatarCaption={profile.email}
+		background={profile.background ?? ''}
+	/>
+	<a
+		class="absolute top-1 right-1 btn-group flex items-center variant-glass-secondary rounded"
+		href="/profile"
+	>
+		<iconify-icon class="text-xl p-0.5" icon="mingcute:edit-3-fill" />
+		<span class="p-0.5 px-1">Edit</span>
+	</a>
+</div>

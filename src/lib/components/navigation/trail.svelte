@@ -3,9 +3,7 @@
 	import NavUtils from './NavUtils.svelte';
 </script>
 
-<div class="flex items-center gap-5">
-	<div class="hidden lg:block">
-		<NavUtils />
-	</div>
+<div class="lg:flex hidden items-center gap-5">
+	<NavUtils />
 	<User />
 </div>

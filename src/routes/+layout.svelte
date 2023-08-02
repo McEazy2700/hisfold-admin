@@ -8,10 +8,11 @@
 	/* theme & colorscheme end */
 
 	import 'iconify-icon';
-	import { AppShell } from '@skeletonlabs/skeleton';
+	import { AppShell, Modal } from '@skeletonlabs/skeleton';
 	import { MobileDrawer, Navigation, Header } from '$lib/components';
 </script>
 
+<Modal />
 <div class={ui.theme}>
 	<MobileDrawer />
 	<AppShell

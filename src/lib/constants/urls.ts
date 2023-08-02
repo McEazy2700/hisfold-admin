@@ -7,7 +7,7 @@ interface URLType {
 export const adminUrl: URLType[] = [
   {
     name: "Dashboard",
-    href: "/dashboard",
+    href: "/",
     icon: "bxs:dashboard"
   },
 ]
