@@ -1,14 +1,14 @@
 <script lang="ts">
 	import { ProfileStore } from '$lib/stores';
-	import { ProfileImages, ProfileForm } from '$lib/components/profile';
+	import { ProfileImages, ProfileFormFields } from '$lib/components/profile';
 	$: profile = $ProfileStore;
 </script>
 
 <ProfileImages
-  editable
+	editable
 	avatarTitle="Profile"
-  background={profile.background ?? ""}
+	background={profile.background ?? ''}
 	avatarCaption="Update church contact and socials"
 	avatar={profile.logo}
 />
-<ProfileForm />
+<ProfileFormFields />

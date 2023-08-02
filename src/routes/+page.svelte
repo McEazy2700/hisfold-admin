@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ProfileImages } from '$lib/components';
+	import { ProfileImages, AdminLiveStreams } from '$lib/components';
 	import { ProfileStore } from '$lib/stores';
 	$: profile = $ProfileStore;
 </script>
@@ -18,4 +18,8 @@
 		<iconify-icon class="text-xl p-0.5" icon="mingcute:edit-3-fill" />
 		<span class="p-0.5 px-1">Edit</span>
 	</a>
+</div>
+
+<div class="mt-16 p-2 lg:mt-28 lg:p-4">
+  <AdminLiveStreams />
 </div>

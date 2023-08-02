@@ -13,7 +13,7 @@
 </script>
 
 <label class="label flex flex-col lg:flex-row gap-1 lg:items-center w-full justify-between">
-	<span class="flex-[0.3]">
+	<span class="flex-[0.3] font-medium">
 		<slot name="label" />
 	</span>
 	{#if type === 'tel'}

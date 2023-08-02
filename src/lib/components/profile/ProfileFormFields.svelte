@@ -2,9 +2,13 @@
 	import { FormField, Label, FieldSet } from '$lib/components/forms';
 	import { ProfileStore } from '$lib/stores';
 	$: profile = $ProfileStore;
+
+  function handleSave() {
+    console.log("saving")
+  }
 </script>
 
-<form class="mt-32 lg:px-20 p-3" action="">
+<form on:submit|preventDefault={handleSave} class="mt-32 lg:px-20 p-3">
 	<FieldSet>
 		<FormField
 			type="text"
@@ -79,4 +83,7 @@
 			</svelte:fragment>
 		</FormField>
 	</FieldSet>
+	<div class="flex w-full my-4 justify-end">
+		<button type="submit" class="btn variant-filled">Save</button>
+	</div>
 </form>

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Drawer } from '@skeletonlabs/skeleton';
-	import { Navigation, NavUtils, User } from '$lib/components';
+	import { Drawer, LightSwitch } from '@skeletonlabs/skeleton';
+	import { Navigation, User } from '$lib/components';
 </script>
 
 <Drawer width="w-80">
@@ -8,11 +8,13 @@
 		<h2 class="p-4 font-semibold text-lg">HisFold</h2>
 		<hr />
 		<div class="p-4 flex flex-col h-[87%] justify-between">
-			<div class="flex flex-col gap-1">
-				<NavUtils />
-				<Navigation />
+			<Navigation />
+			<div class="flex items-center justify-between">
+				<User />
+				<div>
+					<LightSwitch />
+				</div>
 			</div>
-			<User />
 		</div>
 	</div>
 </Drawer>

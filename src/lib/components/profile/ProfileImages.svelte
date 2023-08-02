@@ -22,7 +22,7 @@
 	<div class="relative w-full">
 		<div class="relative">
 			<img
-				class="object-cover rounded rounded-tl-[4rem] w-full max-h-48"
+				class="object-cover rounded rounded-tl-[2rem] lg:rounded-tl-[4rem] w-full max-h-48"
 				src={background}
 				alt="placeholder background"
 			/>
