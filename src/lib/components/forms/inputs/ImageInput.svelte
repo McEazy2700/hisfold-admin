@@ -4,7 +4,7 @@
 	import { FilesStore } from '$lib/stores';
 	import { createEventDispatcher } from 'svelte';
 
-  export let multiple = false;
+	export let multiple = false;
 	$: files = $FilesStore;
 
 	const dispatch = createEventDispatcher();
@@ -15,23 +15,28 @@
 			for (let i = 0; i < recieved.length; i++) {
 				const file = recieved[i];
 				if (file.type.includes('image')) {
-          FilesStore.addFile(file)
+					FilesStore.addFile(file);
 				}
 			}
 		}
 	}
 
 	function handleRemoveFile(e: CustomEvent<{ id: number }>) {
-    FilesStore.removeFile(e.detail.id)
+		FilesStore.removeFile(e.detail.id);
 	}
 
 	function handleSave() {
-    console.log("saving")
+		console.log('saving');
 		dispatch('save', { status: 'success' });
 	}
 </script>
 
-<div class="max-w-2xl flex flex-col items-ceter rounded-lg bg-surface-50-900-token p-2 w-full">
+<div
+	class={`
+    max-w-2xl border-[0.5px] dark:border-surface-700 border-surface-400
+    flex flex-col items-ceter rounded-lg bg-surface-50-900-token p-2 w-full
+`}
+>
 	<h3 class="h3 font-bold my-2 mb-4">Upload Images</h3>
 	<ul class="flex py-3 gap-2 flex-wrap">
 		{#each files as file, index}
