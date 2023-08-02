@@ -1,12 +1,21 @@
 <script lang="ts">
 	import { Avatar } from '@skeletonlabs/skeleton';
 	import { IconButton } from '$lib/components';
+  import { modalStore } from '@skeletonlabs/skeleton';
+  import type { ModalSettings } from '@skeletonlabs/skeleton';
+
+  export const modal: ModalSettings = {
+    type: "component",
+    component: "profileCoverChange"
+  }
 
 	export let editable = false;
 	export let background: string;
 	export let avatar: string | null = null;
 	export let avatarTitle: string | null = null;
 	export let avatarCaption: string | null = null;
+
+  const handleBGChange = () => modalStore.trigger(modal)
 </script>
 
 <div>
@@ -20,8 +29,9 @@
       
 			{#if editable}
 				<button
-					class="btn-group flex items-center variant-glass-tertiary rounded absolute bottom-1 right-1"
 					type="button"
+          on:click={handleBGChange}
+					class="btn-group flex items-center variant-glass-tertiary rounded absolute bottom-1 right-1"
 				>
 					<iconify-icon icon="mingcute:edit-3-fill" class="text-lg p-0.5 px-1" />
 					<span class="p-0.5 px-1">Change</span>

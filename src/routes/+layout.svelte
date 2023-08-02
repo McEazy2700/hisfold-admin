@@ -8,11 +8,19 @@
 	/* theme & colorscheme end */
 
 	import 'iconify-icon';
-	import { AppShell, Modal } from '@skeletonlabs/skeleton';
-	import { MobileDrawer, Navigation, Header } from '$lib/components';
+	import { AppShell, Modal, type ModalComponent } from '@skeletonlabs/skeleton';
+	import { MobileDrawer, ProfileCoverChange, Navigation, Header } from '$lib/components';
+
+	const modalComponentRegistry: Record<string, ModalComponent> = {
+		profileCoverChange: {
+			ref: ProfileCoverChange,
+			slot: '<p>Skeleton</p>'
+		}
+	};
+  
 </script>
 
-<Modal />
+<Modal components={modalComponentRegistry} />
 <div class={ui.theme}>
 	<MobileDrawer />
 	<AppShell
