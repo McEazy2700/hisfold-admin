@@ -25,7 +25,7 @@
 	<MobileDrawer />
 	<AppShell
 		slotHeader="shadow-md"
-		slotPageContent="max-h-[90vh] flex-1 overflow-auto"
+		slotPageContent="max-h-[85vh] lg:max-h-[90vh] flex-1 overflow-auto"
 		slotSidebarLeft={`
       mt-1 h-screen dark:shadow-zinc-300/5 shadow-md
       shadow-black/20 w-0 transition-all lg:w-56 rounded-md
